@@ -1,0 +1,255 @@
+$color1: black;
+$color2: white;
+$color3: yellow;
+
+body	{
+	background-color: #E9E8E8;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	
+}
+
+.parrafo {
+	font-size: 25px;
+	margin-left: 30px;
+}
+
+.titulo	{
+	color: #A62EC1;
+	font-family: sans-serif;
+	text-align: center;
+	margin: 40px;
+	font-size: 50px;
+}
+
+.contenedor-nosotros {
+	display: flex;
+	justify-content: space-evenly;
+	
+
+	.nosotros-hijo2 {
+		width: 900px;
+		height: auto;
+		padding-top: 50px;
+	}
+		img {
+			width: 100%;
+			height: auto;
+		}
+}
+
+.contenedor-logos {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-bottom: 60px;
+	
+	.logo-hijo  {
+		width: 130px;
+		height: auto;
+	}
+
+	.logo-hijo img {
+		width: 100%;
+	}
+
+	.parrafo-logos {
+		width: 1000px;
+		height: auto;
+	}
+
+	.parrafo-logos p {
+		margin: 50px 0 0 40px;
+		font-size: 25px;
+	}
+}
+
+.contact-form {
+	text-align: center;
+	margin-bottom: 87px;
+
+	.contact-form__labels	{
+		text-align: left;
+		display: inline-block;
+		line-height: 2;
+		margin-top: 30px;
+		padding: 30px;
+		border: solid 2px #278282;
+		border-radius: 10px;
+	}
+}
+
+.form-text {
+	text-align: center;
+	color: #003f;
+	font-size: 20px;
+	letter-spacing: 1px;
+	line-height: 1.6;
+	font-family: sans-serif;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+.divbanner {
+	@extend .contact-form;
+}
+
+.banner {
+	width: 1300px;
+	height: 300px;
+	align-items: center;
+}
+
+table	{
+	margin: 75px 0px 298px 220px;
+	border-collapse: collapse;
+}
+
+th	{
+	font-size: 20px;
+	padding: 20px;
+	border: solid 1px $color1;
+	background-color: #2C4A73;
+	color: $color2;
+}
+
+td {
+	padding: 20px;
+	border: solid 1px $color1;
+	background-color: #CFE5F0;
+}
+
+.pie {
+	align-self: flex-end;
+	width: 100%;
+	margin: 30px 0px 0px 0px;
+	background-color: #bdd4e7;
+	background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
+	padding: 15px;
+	text-align: center;	
+	a {
+		margin: 30px;
+		text-decoration: none;
+		color: $color1;
+	}
+		& a:hover  {
+			color: $color2;
+		}
+}
+
+.imagen	{
+	text-align: center
+}
+
+.cuerpo-inicio__img	{
+	float: right;
+	width: 30%;
+	padding-right: 40px;
+	margin-left: 20px;
+}
+
+.imgestudiando {
+	float: right;
+	padding-right: 75px;
+	padding-top: 50px;
+}
+
+.video {
+	margin: 50px 0px 150px 35px;
+}
+
+.li {
+	margin: 7px;
+	transition: transform 0.3s;
+	list-style: none;
+	display: inline-block;
+	border: solid 1px green;
+	padding-left: 25px;
+	padding-right: 25px;
+	border-radius: 10px;
+
+	a {
+		color: #498120;
+		text-decoration: none;
+}
+
+		&:hover {
+			transform: scale(1.2);
+	}
+			& a:hover {
+				color: $color1;
+		}
+}
+
+.navbar-brand {
+	width: 50px;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+}
+
+.logo {
+	width: 50px;
+	height: auto;
+	background-color: #e3f2fd;
+	animation-duration: 1s;
+	animation-name: logo;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes logo {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.estudiantes {
+	width: 100%;
+	height: 100%;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-rows: 300px 300px;
+	grid-template-columns: 400px 400px 400px;
+	grid-gap: 15px;
+	justify-content: center;
+	margin-bottom: 62px;
+}
+
+.grid-container__item:hover {
+	transform: scale(1.1);
+	transition: transform 2s;
+}
+
+.grid-container__item {
+	align-self: stretch;
+}
+
+#carrusel .carousel-indicators li {
+	width: 15px;
+	height: 15px;
+	border-radius: 100%;
+	padding: 0;
+	border: 0;
+}
+
+#carrusel .carousel-indicators li.active {
+	background-color: $color3;
+	width: 15px;
+	height: 15px;
+	border-radius: 100%;
+	padding: 0;
+	border: 0;
+}
+
+.navbar-center {
+	margin-left: 200px;
+
+}
+
