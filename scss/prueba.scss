@@ -17,9 +17,10 @@ body	{
 
 .titulo	{
 	color: #A62EC1;
-	font-family: sans-serif;
+	font-family: 'Nunito', sans-serif;
+
 	text-align: center;
-	margin: 40px;
+	margin: 20px;
 	font-size: 50px;
 }
 
@@ -44,6 +45,7 @@ body	{
 	align-items: center;
 	justify-content: space-around;
 	margin-bottom: 60px;
+	margin-top: 50px;
 	
 	.logo-hijo  {
 		width: 130px;
@@ -102,7 +104,7 @@ body	{
 }
 
 table	{
-	margin: 75px 0px 298px 220px;
+	display: inline-block;
 	border-collapse: collapse;
 }
 
@@ -149,11 +151,24 @@ td {
 	margin-left: 20px;
 }
 
-.imgestudiando {
-	float: right;
-	padding-right: 75px;
-	padding-top: 50px;
+.contenedor-carreras {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 70px;
+	margin-bottom: 250px;
+
+	.contenedor-tabla {
+		width: 400px;
+	}
+	.carreras-img {
+		width: 600px;
+		.imgestudiando {
+			width: 100%;
+		}
+	}
 }
+
+
 
 .video {
 	margin: 50px 0px 150px 35px;
