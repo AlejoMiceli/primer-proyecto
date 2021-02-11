@@ -11,8 +11,11 @@ body	{
 }
 
 .parrafo {
+	text-align: center;
 	font-size: 25px;
-	margin-left: 30px;
+	margin-top: 30px;
+	margin-bottom: 50px;
+
 }
 
 .titulo	{
@@ -20,21 +23,26 @@ body	{
 	font-family: 'Nunito', sans-serif;
 
 	text-align: center;
-	margin: 20px;
+	margin: 20px 0 0 50px;
 	font-size: 50px;
+}
+
+.contenedor-titulo {
+	margin-bottom: 50px;
 }
 
 .contenedor-nosotros {
 	display: flex;
 	justify-content: space-evenly;
+	margin-bottom: 40px;
 	
-
 	.nosotros-hijo2 {
 		width: 900px;
 		height: auto;
 		padding-top: 50px;
 	}
 		img {
+			max-width: 100%;
 			width: 100%;
 			height: auto;
 		}
@@ -44,8 +52,8 @@ body	{
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	margin-bottom: 40px;
-	margin-top: 50px;
+	margin-bottom: 100px;
+	margin-top: 100px;
 	
 	.logo-hijo  {
 		width: 130px;
@@ -67,9 +75,51 @@ body	{
 	}
 }
 
+@media (max-width: 954px) {
+	.contenedor-carreras {
+	  flex-direction: column;
+	  .contenedor-tabla {
+		  margin: auto auto 40px auto;		  
+	  }
+	  .carreras-img {
+		  margin: auto;
+	  }
+	  }
+	}
+
+@media (max-width: 1400px) {
+	.contenedor-logos {
+	  flex-direction: column;
+	}
+  }
+
+@media (max-width: 1110px) {
+	.contenedor-nosotros {
+	  flex-direction: column;
+	}
+}
+
+@media (max-width: 1110px) {
+	.nosotros-hijo2 img {
+	  width: 60%;
+	  
+	}
+}
+
+@media (max-width: 1235px) {
+	.grid-container__item {
+		grid-column: 1 / -1;		
+		margin: auto;
+		.estudiantes {
+			width: 450px;
+			height: auto;
+		}			
+	}
+}
+		
 .contact-form {
 	text-align: center;
-	margin-bottom: 87px;
+	margin-bottom: 130px;
 
 	.contact-form__labels	{
 		text-align: left;
@@ -89,8 +139,7 @@ body	{
 	letter-spacing: 1px;
 	line-height: 1.6;
 	font-family: sans-serif;
-	margin-left: 20px;
-	margin-bottom: 20px;
+	margin: 30px 0 20px 20px;
 }
 
 .divbanner {
@@ -126,8 +175,8 @@ td {
 	align-self: flex-end;
 	width: 100%;
 	margin: 30px 0px 0px 0px;
-	background-color: #bdd4e7;
-	background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
+	background-color: #d8dede;
+	background-image: linear-gradient(315deg, #d8dede 0%, #e5bdf6 74%);
 	padding: 15px;
 	text-align: center;	
 	a {
@@ -155,7 +204,7 @@ td {
 	display: flex;
 	justify-content: space-around;
 	margin-top: 70px;
-	margin-bottom: 250px;
+	margin-bottom: 150px;
 
 	.contenedor-tabla {
 		width: 400px;
@@ -168,33 +217,22 @@ td {
 	}
 }
 
-
-
 .video {
 	margin: 50px 0px 150px 35px;
 }
 
-.li {
-	margin: 7px;
-	transition: transform 0.3s;
-	list-style: none;
-	display: inline-block;
-	border: solid 1px green;
-	padding-left: 25px;
-	padding-right: 25px;
-	border-radius: 10px;
+.navbar {
+	background-color: #d8dede;
+	background-image: linear-gradient(315deg, #d8dede 0%, #e5bdf6 74%);
+	margin-bottom: 50px;
 
-	a {
-		color: #498120;
-		text-decoration: none;
+	.nav-item {
+		padding-right: 20px;
+	}
 }
 
-		&:hover {
-			transform: scale(1.2);
-	}
-			& a:hover {
-				color: $color1;
-		}
+.collapse {
+	margin-left: 20px;
 }
 
 .navbar-brand {
@@ -204,15 +242,21 @@ td {
 	padding: 0;
 }
 
-.logo {
-	width: 50px;
-	height: auto;
-	background-color: #e3f2fd;
-	animation-duration: 1s;
-	animation-name: logo;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
+.navbar-brand {
+	width: 75px;
+	height: 65px;
+
+	.logo {
+		width: 75px;
+		height: auto;
+		text-decoration: none;
+		animation-duration: 1s;
+		animation-name: logo;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+	}
 }
+
 
 @keyframes logo {
 	0% {
@@ -235,15 +279,12 @@ td {
 	grid-gap: 15px;
 	justify-content: center;
 	margin-bottom: 62px;
+	margin-top: 75px;
 }
 
 .grid-container__item:hover {
 	transform: scale(1.1);
 	transition: transform 2s;
-}
-
-.grid-container__item {
-	align-self: stretch;
 }
 
 #carrusel .carousel-indicators li {
