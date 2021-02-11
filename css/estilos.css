@@ -5,24 +5,31 @@ body {
   height: 100%; }
 
 .parrafo {
+  text-align: center;
   font-size: 25px;
-  margin-left: 30px; }
+  margin-top: 30px;
+  margin-bottom: 50px; }
 
 .titulo {
   color: #A62EC1;
   font-family: 'Nunito', sans-serif;
   text-align: center;
-  margin: 20px;
+  margin: 20px 0 0 50px;
   font-size: 50px; }
+
+.contenedor-titulo {
+  margin-bottom: 50px; }
 
 .contenedor-nosotros {
   display: flex;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  margin-bottom: 40px; }
   .contenedor-nosotros .nosotros-hijo2 {
     width: 900px;
     height: auto;
     padding-top: 50px; }
   .contenedor-nosotros img {
+    max-width: 100%;
     width: 100%;
     height: auto; }
 
@@ -30,8 +37,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-bottom: 40px;
-  margin-top: 50px; }
+  margin-bottom: 100px;
+  margin-top: 100px; }
   .contenedor-logos .logo-hijo {
     width: 130px;
     height: auto; }
@@ -44,9 +51,37 @@ body {
     margin: 50px 0 0 40px;
     font-size: 25px; }
 
+@media (max-width: 954px) {
+  .contenedor-carreras {
+    flex-direction: column; }
+    .contenedor-carreras .contenedor-tabla {
+      margin: auto auto 40px auto; }
+    .contenedor-carreras .carreras-img {
+      margin: auto; } }
+
+@media (max-width: 1400px) {
+  .contenedor-logos {
+    flex-direction: column; } }
+
+@media (max-width: 1110px) {
+  .contenedor-nosotros {
+    flex-direction: column; } }
+
+@media (max-width: 1110px) {
+  .nosotros-hijo2 img {
+    width: 60%; } }
+
+@media (max-width: 1235px) {
+  .grid-container__item {
+    grid-column: 1 / -1;
+    margin: auto; }
+    .grid-container__item .estudiantes {
+      width: 450px;
+      height: auto; } }
+
 .contact-form, .divbanner {
   text-align: center;
-  margin-bottom: 87px; }
+  margin-bottom: 130px; }
   .contact-form .contact-form__labels, .divbanner .contact-form__labels {
     text-align: left;
     display: inline-block;
@@ -63,8 +98,7 @@ body {
   letter-spacing: 1px;
   line-height: 1.6;
   font-family: sans-serif;
-  margin-left: 20px;
-  margin-bottom: 20px; }
+  margin: 30px 0 20px 20px; }
 
 .banner {
   width: 1300px;
@@ -91,8 +125,8 @@ td {
   align-self: flex-end;
   width: 100%;
   margin: 30px 0px 0px 0px;
-  background-color: #bdd4e7;
-  background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
+  background-color: #d8dede;
+  background-image: linear-gradient(315deg, #d8dede 0%, #e5bdf6 74%);
   padding: 15px;
   text-align: center; }
   .pie a {
@@ -115,7 +149,7 @@ td {
   display: flex;
   justify-content: space-around;
   margin-top: 70px;
-  margin-bottom: 250px; }
+  margin-bottom: 150px; }
   .contenedor-carreras .contenedor-tabla {
     width: 400px; }
   .contenedor-carreras .carreras-img {
@@ -126,22 +160,15 @@ td {
 .video {
   margin: 50px 0px 150px 35px; }
 
-.li {
-  margin: 7px;
-  transition: transform 0.3s;
-  list-style: none;
-  display: inline-block;
-  border: solid 1px green;
-  padding-left: 25px;
-  padding-right: 25px;
-  border-radius: 10px; }
-  .li a {
-    color: #498120;
-    text-decoration: none; }
-  .li:hover {
-    transform: scale(1.2); }
-  .li a:hover {
-    color: black; }
+.navbar {
+  background-color: #d8dede;
+  background-image: linear-gradient(315deg, #d8dede 0%, #e5bdf6 74%);
+  margin-bottom: 50px; }
+  .navbar .nav-item {
+    padding-right: 20px; }
+
+.collapse {
+  margin-left: 20px; }
 
 .navbar-brand {
   width: 50px;
@@ -149,14 +176,17 @@ td {
   margin: 0;
   padding: 0; }
 
-.logo {
-  width: 50px;
-  height: auto;
-  background-color: #e3f2fd;
-  animation-duration: 1s;
-  animation-name: logo;
-  animation-iteration-count: infinite;
-  animation-direction: alternate; }
+.navbar-brand {
+  width: 75px;
+  height: 65px; }
+  .navbar-brand .logo {
+    width: 75px;
+    height: auto;
+    text-decoration: none;
+    animation-duration: 1s;
+    animation-name: logo;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; }
 
 @keyframes logo {
   0% {
@@ -174,14 +204,12 @@ td {
   grid-template-columns: 400px 400px 400px;
   grid-gap: 15px;
   justify-content: center;
-  margin-bottom: 62px; }
+  margin-bottom: 62px;
+  margin-top: 75px; }
 
 .grid-container__item:hover {
   transform: scale(1.1);
   transition: transform 2s; }
-
-.grid-container__item {
-  align-self: stretch; }
 
 #carrusel .carousel-indicators li {
   width: 15px;
